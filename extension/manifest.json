@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Rex",
+  "version": "1.0.0",
+  "description": "Never forget important emails again.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://mail.google.com/*", "http://localhost:3001/*"],
+  "externally_connectable": {
+    "matches": [
+      "https://getrex.ai/*",
+      "http://localhost:3000/*"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["src/content/index.tsx"],
+      "css": [],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Rex",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ]
+}

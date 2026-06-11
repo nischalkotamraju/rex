@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+:root {
+  --bg: #ffffff;
+  --fg: #0f0a1e;
+  --muted: #555;
+  --muted-2: #999;
+  --card: #ffffff;
+  --card-alt: #fafafa;
+  --border: rgba(0,0,0,0.08);
+  --border-soft: rgba(0,0,0,0.06);
+  --nav-scrolled: rgba(255,255,255,0.9);
+  --purple: #7c3aed;
+  --card-purple: #faf9ff;
+  --inner-border: #f1f3f4;
+  --inner-text: #3c4043;
+  --inner-muted: #5f6368;
+  --inner-bg: #f1f3f4;
+  --demo-bg: #ffffff;
+  --demo-bar: #f8f9fa;
+  --demo-bar-border: #e8eaed;
+  --demo-sidebar-active: #fce8e6;
+  --demo-sidebar-icon: #c5221f;
+  --demo-sidebar-icon-alt: #5f6368;
+  --demo-sidebar-text: #444746;
+  --demo-row-border: #f1f3f4;
+  --demo-row-bg: #ffffff;
+  --demo-row-selected: #f5f3ff;
+  --demo-url-bg: #ffffff;
+  --demo-url-border: #e8eaed;
+  --demo-text: #202124;
+  --demo-text-2: #3c4043;
+  --demo-muted: #9aa0a6;
+  --demo-kbd-bg: #f1f3f4;
+  --demo-kbd-border: #e0e0e0;
+  --demo-kbd-color: #5f6368;
+  --demo-commit-text: #202124;
+  --demo-commit-action: #3c4043;
+}
+
+.dark {
+  --bg: #0c0a1e;
+  --fg: #ede9ff;
+  --muted: #9990b8;
+  --muted-2: #6b6490;
+  --card: #13111f;
+  --card-alt: #100e1c;
+  --border: rgba(255,255,255,0.08);
+  --border-soft: rgba(255,255,255,0.06);
+  --nav-scrolled: rgba(12,10,30,0.9);
+  --purple: #7c3aed;
+  --card-purple: #1a1330;
+  --inner-border: rgba(255,255,255,0.08);
+  --inner-text: #c8c4e0;
+  --inner-muted: #9990b8;
+  --inner-bg: rgba(255,255,255,0.06);
+  --demo-bg: #1a1730;
+  --demo-bar: #13111f;
+  --demo-bar-border: rgba(255,255,255,0.08);
+  --demo-sidebar-active: rgba(197,34,31,0.15);
+  --demo-sidebar-icon: #f87171;
+  --demo-sidebar-icon-alt: #9990b8;
+  --demo-sidebar-text: #c8c4e0;
+  --demo-row-border: rgba(255,255,255,0.06);
+  --demo-row-bg: #1a1730;
+  --demo-row-selected: #261d42;
+  --demo-url-bg: #13111f;
+  --demo-url-border: rgba(255,255,255,0.1);
+  --demo-text: #ede9ff;
+  --demo-text-2: #c8c4e0;
+  --demo-muted: #7a7598;
+  --demo-kbd-bg: rgba(255,255,255,0.08);
+  --demo-kbd-border: rgba(255,255,255,0.12);
+  --demo-kbd-color: #9990b8;
+  --demo-commit-text: #ede9ff;
+  --demo-commit-action: #c8c4e0;
+}
+
+* { box-sizing: border-box; }
+
+.no-cursor, .no-cursor *, .no-cursor *:hover, .no-cursor *:active, .no-cursor *:focus {
+  cursor: none !important;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #ede9fe;
+  color: #6d28d9;
+}
